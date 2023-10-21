@@ -1,0 +1,40 @@
+Citim comenzi incontinuu de la stdin.
+    - Intr-un while, citim comenzi de la stdin.
+    - eliminam new line ul de la final
+    - tratam fiecare comanda ca atare.
+
+LOAD:
+    - Verificam daca exista fisierul. Daca exista, mai intai sustragem
+        numarul magic, dimensiunea, si pixelul maxim.
+    - Pastram cu o variabila sa vedem daca a fost incarcata sau nu o imagine
+    - Pentru fiecare tip de fisier, avem o functie cu care pastram pixelii.
+        Daca imaginea e colo, matricea o sa aiba de 3 ori mai multe coloane
+
+SAVE:
+    - Daca avem parametrul ascii salvam in format ascii
+    - avem doua functii care salveaza imaginea in format ascii sau binar,
+
+SELECT:
+    - Daca e select all pastram dimensiunile matricei
+    - Comparam valorile si le preluam in ordine crescatoare
+    - Pastram valorile intr-un array
+
+ROTATE:
+    - Daca nu avem selectata o portiune, rotim toata matricea, altfel, rotim doar portiunea
+    - Inversand coloanele transpusei avem deja matricea rotita la -90 de grade. Daca e multi
+        plu de 90 repetam actiunea.
+    - Pentru rotirea intraga a imaginii, o functie verifica daca ughiul e corect si returneaza
+        numarul de cate ori se va aplica algoritmul. Algoritmul este aplicat si pentru color
+        si pentru imaginile alb-negru
+    - Pentru rotirea partiala, verificam daca unghiul e corect, si o alta functie verifica 
+        daca imaginea e alb negru sau colora, apoi aplicam algoritmul
+
+CROP:
+    - Intr-o functie, copiem partea selectata intr-o matrice, eliberam matricea initiala, si
+        punem valorile noi in matricea originala
+APPLY:
+    - Practic aplica fiecare filtru pe imagine. Algoritmul e simplu, se iau pixelii invecinati
+        pixelului target si se inmultesc cu filtrul apoi se aduna la final si acela este noul pixel
+EXIT:
+    - Free la tot si se iese din program
+    
